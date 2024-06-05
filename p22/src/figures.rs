@@ -1,3 +1,5 @@
+// use std::fmt::{Debug, Display};
+
 #[derive(Debug, PartialEq, Eq, Clone, Copy)]
 pub struct Point {
     pub x: u32,
@@ -74,6 +76,16 @@ impl Rectangle {
         self.a.x * self.b.x
     }
     pub fn perimeter(&self) -> u32 {
+        self.a.x * self.b.x
+    }
+}
+
+pub trait Area {
+    fn area(&self) -> u32;
+}
+
+impl Area for Rectangle {
+    fn area(&self) -> u32 {
         self.a.x * self.b.x
     }
 }

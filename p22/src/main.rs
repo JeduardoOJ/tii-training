@@ -37,5 +37,8 @@ fn main() {
     let rect: Rectangle = Rectangle::new(a, b);
     let area_rect: u32 = rect.area();
     let peri_rect: u32 = rect.perimeter();
-    println!("{:?}  area = {} perimeter = {}", rect, area_rect, peri_rect);
+    println!(
+        "{:#?}  area = {} perimeter = {}",
+        rect, area_rect, peri_rect
+    );
 }
