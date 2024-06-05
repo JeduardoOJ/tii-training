@@ -1,26 +1,26 @@
 #[derive(Debug, PartialEq, Eq, Clone, Copy)]
 pub struct Point {
-    x: u32,
-    y: u32,
+    pub x: u32,
+    pub y: u32,
 }
 
 #[derive(Debug, PartialEq, Eq, Clone, Copy)]
 pub struct Circle {
-    center_point: Point,
-    radius: u32,
+    pub center_point: Point,
+    pub radius: u32,
 }
 
 #[derive(Debug, PartialEq, Eq, Clone, Copy)]
 pub struct Triangle {
-    a: Point,
-    b: Point,
-    c: Point,
+    pub a: Point,
+    pub b: Point,
+    pub c: Point,
 }
 
 #[derive(Debug, PartialEq, Eq, Clone, Copy)]
 pub struct Rectangle {
-    a: Point,
-    b: Point,
+    pub a: Point,
+    pub b: Point,
 }
 
 #[derive(Debug)]
