@@ -1,5 +1,5 @@
 pub fn the_twelve_days_of_christmas() {
-    let song: [&str; 12] = [
+    let song = [
         "Twelve drummers drumming,",
         "Eleven pipers piping,",
         "Ten lords a-leaping,",
@@ -11,19 +11,19 @@ pub fn the_twelve_days_of_christmas() {
         "Four calling birds,",
         "Three French hens,",
         "Two turtle doves,",
-        "",
     ];
-    let days: [&str; 12] = [
+    let days = [
         "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth",
         "tenth", "eleventh", "twelfth",
     ];
 
-    for i in 0..12 {
-        println!("On the {} day of Christmas, ", days[i]);
-        println!("my true love gave to me,");
+    println!("\n\nThe Twelve Days of Christmas Song\n");
 
-        for j in 11 - i..11 {
-            println!("{}", song[j]);
+    for (i, day) in days.iter().enumerate() {
+        println!("On the {} day of Christmas, ", day);
+        println!("my true love gave to me,");
+        for song_part in &song[11 - i..] {
+            println!("{}", *song_part);
         }
 
         if i == 0 {
